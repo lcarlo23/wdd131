@@ -25,7 +25,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 25px;
-    position: relative;
 }
 
 #menu {
@@ -89,6 +88,7 @@ main {
 
 #temples img {
     width: 100%;
+    height: auto;
 }
 
 /* FOOTER STYLING */
