@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #1d4d72;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+
+/* HEADER STYLING */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+}
+
+#menu {
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+header nav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-weight: 500;
+    gap: 25px;
+    width: 100%;
+}
+
+header nav.show {
+    display: flex;
+}
+
+header nav a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* MAIN STYLING */
+main {
+    max-width: 800px;
+    padding: 25px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#temples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+#temples img {
+    width: 100%;
+}
+
+/* FOOTER STYLING */
+footer {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: var(--primary-color);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#lastModified {
+    font-size: 0.75rem;
+    color: yellow;
+}
