@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Luca Carlo">
     <meta name="description" content="Place Page">
-    <title>Place</title>
+    <title>Bergamo</title>
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
@@ -17,11 +23,61 @@
         <h1>Bergamo</h1>
     </header>
     <main>
-        <img src="" alt="" srcset="">
-        <div id="data"></div>
-        <div id="weather"></div>
+        <img class="hero-image" src="images/bergamo-hero-small.webp" alt="Bergamo Photo"
+            srcset="images/bergamo-hero-small.webp 500w, images\bergamo-hero-medium.webp 1000w, images\bergamo-hero-large.webp 1500w"
+            sizes="(min-width: 1000px) 1500px, (min-width: 550px) 1000px, 500px">
+        <div id="data" class="info-box">
+            <h2>Data</h2>
+            <div class="items">
+                <ul>
+                    <li>Area: </li>
+                    <li>Population: </li>
+                    <li>Capital: </li>
+                    <li>Languages: </li>
+                    <li>Currency: </li>
+                    <li>Time Zone: </li>
+                    <li>Calling Code: </li>
+                    <li>Internet TLD: </li>
+                </ul>
+            </div>
+            <div class="values">
+                <ul>
+                    <li>40.16 sq km</li>
+                    <li>120,580</li>
+                    <li>Bergamo</li>
+                    <li>Italian, Bergamasque</li>
+                    <li>Euro</li>
+                    <li>CET/CEST</li>
+                    <li>+39 035</li>
+                    <li>.it</li>
+                </ul>
+            </div>
+        </div>
+        <div id="weather" class="info-box">
+            <h2>Weather</h2>
+            <img class="weather-icon" src="images/weather-icon.svg" alt="Weather Icon">
+            <div class="items">
+                <ul>
+                    <li>Temperature: </li>
+                    <li>Conditions: </li>
+                    <li>Wind: </li>
+                    <li>Wind Chill: </li>
+                </ul>
+            </div>
+            <div class="values">
+                <ul>
+                    <li>10°C</li>
+                    <li>Partly Cloudy</li>
+                    <li>5 km/h</li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <p>© <span id="currentyear"></span> | Luca Carlo | Italy</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>

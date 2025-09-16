@@ -1,0 +1,40 @@
+@media screen and (min-width: 800px) {
+    main {
+        position: relative;
+    }
+
+    .info-box {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(5px);
+    }
+
+    .info-box h2 {
+        text-align: left;
+        background-color: var(--secondary-color);
+        width: 100%;
+        padding: 15px;
+        margin-left: -50px;
+    }
+
+    #data {
+        border: none;
+        top: 25px;
+        left: 25px;
+    }
+
+    #weather {
+        bottom: 25px;
+        right: 25px;
+    }
+
+    #weather h2::after {
+        content: "🌥️";
+        margin-left: 50px;
+    }
+
+    #weather img {
+        display: none;
+    }
+
+}
