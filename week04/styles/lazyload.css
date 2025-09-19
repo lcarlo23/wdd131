@@ -1,0 +1,64 @@
+:root {
+    --primary-color: #1d4d72;
+    --primary-text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY STYLING */
+
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+img {
+    display: block;
+    animation: fade-in 5s;
+}
+
+
+/* FOOTER STYLING */
+
+footer {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: var(--primary-color);
+    padding: 15px;
+    text-align: center;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#lastModified {
+    font-size: 0.75rem;
+    color: var(--primary-text-color);
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
