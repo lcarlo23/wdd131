@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Activity</title>
+    <meta name="author" content="Luca Carlo">
+    <meta name="description" content="Form Activity Page">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <p>Fields marked with * are mandatory</p>
+            <label for="product">Product Name*
+                <select name="product" id="product" required>
+                    <option value="" disabled selected>Select a Product...</option>
+                </select>
+            </label>
+
+            <fieldset>
+                <legend>Overall Rating*</legend>
+                <div class="rating">
+                    <input type="radio" name="stars" id="one-stars" value="5" required>
+                    <label for="one-stars"></label>
+                    <input type="radio" name="stars" id="two-stars" value="4" required>
+                    <label for="two-stars"></label>
+                    <input type="radio" name="stars" id="three-stars" value="3" required>
+                    <label for="three-stars"></label>
+                    <input type="radio" name="stars" id="four-stars" value="2" required>
+                    <label for="four-stars"></label>
+                    <input type="radio" name="stars" id="five-stars" value="1" required>
+                    <label for="five-stars"></label>
+                </div>
+            </fieldset>
+
+            <label for="date">Date of Installation*
+                <input type="date" name="date" id="date" required>
+            </label>
+
+            <fieldset class="checkboxes">
+                <legend>Which features did you find useful in the product?<br><span>(Check all that
+                        apply)</span></legend>
+                <label for="durability"><input type="checkbox" name="features" id="durability"> Durability</label>
+                <label for="ease"><input type="checkbox" name="features" id="ease"> Ease of Use</label>
+                <label for="performance"><input type="checkbox" name="features" id="performance"> Performance</label>
+                <label for="design"><input type="checkbox" name="features" id="design"> Design</label>
+            </fieldset>
+
+            <label for="review">Written Review <span>(Optional)</span>
+                <textarea name="review" id="review" rows="8"></textarea></label>
+
+            <label for="name">Your Name <span>(Optional)</span><input type="text" name="name" id="name"></label>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> | Luca Carlo | Italy</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
